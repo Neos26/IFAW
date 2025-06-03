@@ -4,16 +4,28 @@
   font-family: 'Inter', sans-serif;
 }
 
+
+:root {
+  --green: #b6ff7a;
+  --dark-bg: #181c18;
+  --card-bg: #232323;
+  --accent: #ff2d55;
+  --white: #fff;
+  --gray: #e0e0e0;
+}
+
 body {
+  background: var(--dark-bg);
+  color: var(--white);
+  font-family: 'Montserrat', Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: #fff;
   overflow-x: hidden;
 }
 
+
 .showcase {
   height: 1000px;
-  background: #fff;
 }
 
 /* Sidebar */
@@ -112,9 +124,225 @@ div.org_name h3 {
 
 
 
+header {
+  background: rgb(0, 17, 6);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 60px 15px 60px;
+  position: relative;
+}
 
+nav {
+  display: flex;
+  gap: 30px;
+}
+
+nav a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 700;
+  transition: color 0.2s;
+  letter-spacing: 1px;
+}
+
+nav a:hover {
+  color: var(--green);
+}
 
 .hero {
+  background: linear-gradient(rgba(24, 28, 24, 0.6), rgba(24, 28, 24, 0.6)), url('iFAW_Images/tiger.jpg') center/cover no-repeat;
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 80px 60px 40px 60px;
+  position: relative;
+}
+
+.hero-text {
+  max-width: 600px;
+  margin-left: 60px;
+}
+
+.hero-title {
+  font-family: 'Pacifico', cursive;
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 0;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+.hero-subtitle {
+  font-family: 'Pacifico', cursive;
+  font-size: 2.2rem;
+  color: var(--green);
+  margin-top: 0;
+  margin-bottom: 10px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+.hero-desc {
+  margin-top: 20px;
+  font-size: 1.1rem;
+  color: var(--gray);
+  line-height: 1.6;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+}
+
+
+.features {
+  background: var(--card-bg);
+  border-radius: 40px;
+  margin: -60px auto 0 auto;
+  padding: 30px 40px;
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  max-width: 800px;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.18);
+}
+
+.feature {
+  text-align: center;
+  color: var(--green);
+  min-width: 100px;
+}
+
+.feature i {
+  font-size: 2rem;
+  margin-bottom: 8px;
+  color: var(--green);
+}
+
+.feature-title {
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 700;
+  margin-top: 6px;
+}
+
+.section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px;
+  gap: 40px;
+  padding-top: 100px;
+}
+
+
+.section.reverse {
+  flex-direction: row-reverse;
+}
+
+.section-img {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.section-img img {
+  border-radius: 50%;
+  width: 260px;
+  height: 260px;
+  object-fit: cover;
+  background: var(--green);
+  padding: 10px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.18);
+}
+
+.section-content {
+  flex: 2;
+}
+
+.section-title {
+  font-family: 'Pacifico', cursive;
+  font-size: 2rem;
+  color: var(--white);
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+
+.section-title span {
+  color: var(--green);
+  font-family: inherit;
+}
+
+.section-desc {
+  color: var(--gray);
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.shop-btn {
+  background: var(--green);
+  color: #222;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+  transition: background 0.2s;
+}
+
+.shop-btn:hover {
+  background: #d0ffb6;
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+
+  .section,
+  .hero,
+  header {
+    flex-direction: column;
+    padding: 30px;
+    align-items: flex-start;
+  }
+
+  .features {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .donate-btn {
+    right: 30px;
+    top: 30px;
+  }
+}
+
+@media (max-width: 700px) {
+
+  .section,
+  .hero,
+  header {
+    padding: 16px;
+  }
+
+  .features {
+    padding: 10px;
+  }
+
+  .section-img img {
+    width: 160px;
+    height: 160px;
+  }
+}
+
+
+
+
+
+/* .hero {
   position: relative;
   width: 100%;
   height: 100vh;
@@ -171,7 +399,7 @@ div.org_name {
   max-width: 40%;
   text-align: left;
   z-index: 10;
-}
+} */
 
 /* Intro Section */
 .intro_section {
@@ -180,9 +408,9 @@ div.org_name {
   align-items: center;
   padding-left: 7%;
   padding-right: 4%;
-  padding-top: 2%;
+  padding-top: 3%;
   gap: 20px;
-  background-image: url("iFAW_Images/tropical_leaf.jpg");
+  background: url(--dark_bg);
 }
 
 #intro_vid {
@@ -285,7 +513,6 @@ div.org_name {
 
 
 .updates {
-  background-image: url("iFAW_Images/tropical_leaf.jpg");
   padding-bottom: 50px;
   padding-top: 50px;
 }
@@ -389,12 +616,13 @@ div.org_name {
 
 /* Biodiversity Section */
 .biodiversity-section {
-  background: #0d3d15;
-  background: linear-gradient(0deg, #2E6F40 1%, rgba(255, 255, 255, 1) 66%);
+  /* background: #0d3d15;
+  background: linear-gradient(0deg, #2E6F40 1%, rgba(255, 255, 255, 1) 66%); */
   padding: 60px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: white;
 }
 
 .biodiversity-title {
@@ -403,17 +631,6 @@ div.org_name {
   text-align: center;
   margin-bottom: 60px;
   color: #042d01;
-}
-
-.biodiversity-grid {
-  display: grid;
-  grid-template-columns: 1.2fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 28px 32px;
-  max-width: 1000px;
-  width: 100%;
-  margin: 0 auto;
-  padding-bottom: 110px;
 }
 
 
@@ -465,39 +682,43 @@ div.org_name {
   border-radius: 5px;
 }
 
-.biodiversity-card {
-  background: #fff;
-  border-radius: 12px;
-  padding: 32px 28px 28px 28px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
+.biodiversity-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  grid-template-rows: 2fr 2fr;
+  gap: 28px 32px;
+  max-width: 1500px;
+  width: 100%;
+  margin: 0 auto;
+  padding-bottom: 220px;
 }
 
 .biodiversity-card-large {
   grid-row: 1 / span 2;
   grid-column: 1 / 2;
-  min-height: 280px;
+  min-height: 600px;
   position: relative;
-  background-image: url(iFAW_Images/ranger.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.biodiversity-card-small-top {
-  min-height: 120px;
   background-image: url(iFAW_Images/visionary.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.biodiversity-card-small-bottom {
-  min-height: 120px;
+.biodiversity-card-small-top {
+  min-height: 300px;
+  /* was 240px, now doubled */
   background-image: url(iFAW_Images/rhino.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.biodiversity-card-small-bottom {
+  min-height: 300px;
+  /* was 240px, now doubled */
+  background-image: url(iFAW_Images/ranger.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 
 .biodiversity-header {
   display: flex;
@@ -547,14 +768,6 @@ div.org_name {
 
 
 
-.biodiversity-grid,
-.grid_container_climate {
-  width: 100%;
-  max-width: 1000px;
-  margin: 0 auto;
-  gap: 20px 20px;
-}
-
 
 @media (max-width: 900px) {
 
@@ -586,15 +799,14 @@ div.org_name {
 .rescue_container {
   padding-top: 50px;
   padding-bottom: 50px;
-  background-image: url("iFAW_Images/tropical_leaf.jpg");
 }
 
 .wildlife_rescue {
   display: flex;
-  gap: 60px;
+  gap: 28px;
   justify-content: center;
   flex-wrap: wrap;
-  margin-left: 70px;
+  margin-left: 60px;
   margin-bottom: 60px;
 
 }
@@ -605,8 +817,10 @@ div.org_name {
   border-radius: 18px;
   color: #fff;
   padding: 32px 28px 24px 28px;
-  min-width: 320px;
-  max-width: 400px;
+  min-width: 420px;
+  max-width: 500px;
+  min-height: 300px;
+  max-height: 300px;
   flex: 1 1 320px;
   box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 1);
   display: flex;
@@ -684,284 +898,283 @@ div.org_name {
   display: block;
 }
 
-/*Cimate Section*/
-.climate-section {
-  width: 100vw;
-  min-height: 100vh;
+
+
+
+/* Climate Section */
+
+.climate-news-section {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+  border-radius: 32px;
+  padding: 40px 48px;
+  margin: 60px auto;
+  max-width: 1800px;
+  align-items: start;
+}
+
+.climate-main {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: 0;
-  padding-top: 60px;
-  padding-bottom: 150px;
-  background: #0d3d15;
-  background: linear-gradient(30deg, #2E6F40 1%, rgba(255, 255, 255, 1) 75%);
-}
-
-.climate-section>* {
-  max-width: 1200px;
-  width: 100%;
-  margin: 0 auto;
-  box-sizing: border-box;
-}
-
-.card-gradient-climate {
-  background-size: cover;
-  background-position: center;
-  color: #fff;
-  flex: 1 1 320px;
-  box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.12);
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  overflow: hidden;
-}
-
-.card-gradient-climate::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%);
-  z-index: 0;
-  transition: opacity 0.4s;
-}
-
-.card-gradient-climate:hover::before {
-  opacity: 0;
 }
 
 .climate-title {
   font-size: 100px;
-  font-weight: 700;
-  text-align: center;
-  margin-bottom: 36px;
-  color: #042d01;
+  font-weight: 800;
+  color: #b6ff7a;
+  margin-bottom: 28px;
+  letter-spacing: 2px;
 }
 
-.climate-featured-row {
+.climate-news-grid {
+  padding-top: 100px;
   display: grid;
-  grid-template-columns: 2fr 1.2fr;
-  gap: 0;
-  background: #fff;
-  border-radius: 12px;
-  overflow: hidden;
-  margin-bottom: 36px;
-  box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.6);
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
 }
 
-.climate-featured-image img {
+.climate-news-item {
+  background: rgba(35, 35, 35, 0.92);
+  border-radius: 24px;
+  padding: 18px 18px 18px 18px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.climate-news-item img {
   width: 100%;
-  height: 100%;
+  height: 120px;
   object-fit: cover;
-  min-height: 260px;
-  display: block;
-
+  border-radius: 14px;
+  margin-bottom: 14px;
 }
 
-.climate-featured-info {
-  background: linear-gradient(143deg, #000000 5%, #166D3B 80%);
-  padding: 36px 32px;
+.climate-news-content h3 {
+  color: #b6ff7a;
+  font-size: 1.15rem;
+  margin: 0 0 8px 0;
+}
+
+.climate-news-content p {
+  color: #fff;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.climate-events-sidebar {
+  background: rgba(35, 35, 35, 0.92);
+  border-radius: 24px;
+  padding: 24px 18px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  min-height: 260px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.8);
-}
-
-.climate-featured-name {
-  font-size: 1.4rem;
-  font-weight: 700;
-  margin-bottom: 6px;
-  color: #ffffff;
-}
-
-.climate-featured-role {
-  font-size: 1.1rem;
-  color: #ffae00;
-  margin-bottom: 18px;
-}
-
-.climate-featured-role-wildlife {
-  font-size: 1.1rem;
-  color: #ffae00;
-  padding-top: 18px;
-  margin-bottom: 18px;
-}
-
-.climate-featured-desc {
-  font-size: 1rem;
-  color: #408A36;
-  margin-bottom: 18px;
-}
-
-.climate-list-row {
-  display: flex;
   gap: 28px;
-  justify-content: center;
+  min-width: 260px;
+  align-items: left;
+  margin-top: 145px;
 }
 
-.climate-card {
-  border-radius: 12px;
-  box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.6);
+
+.climate-event {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 18px 0;
-  padding-left: 18px;
-  flex: 1 1 320px;
-  background: linear-gradient(143deg, #000000 5%, #166D3B 80%);
-
+  flex-direction: column;
+  align-items: left;
+  height: 400px;
 }
 
-.climate-card-image {
-  flex-shrink: 0;
-  width: 110px;
-  height: 110px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 15px;
-  padding-top: 5px;
-}
-
-.climate-card-image img {
-  border-radius: 8px;
+.climate-event img {
+  width: 100%;
+  height: 334px;
   object-fit: cover;
-  height: 110px;
-  width: 110px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.climate-event h3 {
+  color: #b6ff7a;
+  font-size: 1.08rem;
+  margin: 0 0 4px 0;
+  text-align: left;
+}
+
+.climate-event span {
+  color: #e0e0e0;
+  font-size: 0.98rem;
+  margin-bottom: 6px;
+  text-align: center;
   display: block;
 }
 
-.climate-card-info {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.climate-card-name {
-  font-size: 1.1rem;
-  font-weight: 700;
-  margin-bottom: 4px;
-}
-
-.climate-card-role {
-  font-size: 1rem;
-  color: #444;
-  margin-bottom: 10px;
-}
-
-.climate-card-desc {
-  font-size: 0.97rem;
-  color: #333;
-  margin-bottom: 10px;
+.climate-event p {
+  color: #fff;
+  font-size: 0.98rem;
+  text-align: left;
+  margin: 0;
 }
 
 @media (max-width: 900px) {
-  .climate-featured-row {
+  .climate-news-section {
     grid-template-columns: 1fr;
+    padding: 24px 10px;
+    gap: 24px;
   }
 
-  .climate-featured-info {
-    min-height: unset;
-    padding: 24px 16px;
-  }
-
-  .climate-list-row {
-    flex-direction: column;
+  .climate-news-grid {
+    grid-template-columns: 1fr;
     gap: 18px;
   }
 
-  .climate-card {
-    max-width: 98vw;
-    min-width: 0;
+  .climate-events-sidebar {
+    min-width: unset;
+    width: 100%;
     flex-direction: row;
-    padding: 12px 12px 12px 0;
+    gap: 16px;
+    padding: 18px 12px;
+  }
+
+  .climate-event {
+    flex: 1;
+    margin-bottom: 0;
   }
 }
 
-/* Climate Section */
-.page_title_climate {
-  color: #000000;
-  text-align: center;
-  font-size: 100px;
-  margin-bottom: 50px;
-  margin-left: 60px;
-}
-
-.climate {
-  /*background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(elephant.jpg) center/cover;*/
-  width: 100%;
-  padding: 25px 0 50px 0;
-  justify-content: space-around;
-  text-align: center;
-}
-
-.grid_container_climate {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto;
-  gap: 10px;
-  width: auto;
-  height: 80%;
-  margin-left: 60px;
-  padding: 20px;
-}
-
-.top_box_climate,
-.bottom_left_box_climate,
-.bottom_right_box_climate {
-  box-sizing: border-box;
-}
-
-.top_box_climate {
-  grid-column: 1 / span 2;
-}
-
-.bottom_left_box_climate {
-  grid-column: 1;
-}
-
-.bottom_right_box_climate {
-  grid-column: 2;
-}
-
-#remote,
-#joining_hands,
-#wild_life_conservation {
-  height: 250px;
-  width: auto;
-}
-
-.remote_type,
-.wild_life_type,
-.joining_hands_type {
-  text-align: center;
-  color: #518ded;
-}
-
-.remote_title,
-.wild_life_title,
-.joining_hands_title {
-  text-align: center;
-}
-
-.remote_subcaption,
-.wild_life_subcaption,
-.joining_hands_subcaption {
-  display: inline-block;
-  text-align: center;
-  margin: 0 auto;
-  color: #adbfd3;
-}
 
 /* Marine Conservation */
+
 .Marine_conservation {
   padding: 20px 0 100px 60px;
-  background: #0d3d15;
-  background: linear-gradient(338deg, #2E6F40 1%, rgba(255, 255, 255, 1) 75%);
+  background-color: white;
+  /* background: #0d3d15;
+  background: linear-gradient(338deg, #2E6F40 1%, rgba(255, 255, 255, 1) 75%); */
   /*background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("marine.jpg") no-repeat center/cover;*/
 }
+
+
+.marine-image-section {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  max-width: 70%;
+  margin: 80px auto 60px auto;
+}
+
+.marine-card {
+  display: flex;
+  align-items: center;
+  background: #232323EB;
+  border-radius: 22px;
+  box-shadow: 0 8px 32px rgba(44, 62, 80, 0.13);
+  overflow: hidden;
+  transition: box-shadow 0.25s, transform 0.25s;
+
+}
+
+.marine-card:hover {
+  box-shadow: 0 16px 48px rgba(44, 62, 80, 0.18);
+  transform: translateY(-8px) scale(1.03);
+}
+
+.marine-card.reverse {
+  flex-direction: row-reverse;
+  background: #232323EB;
+}
+
+.marine-img {
+  flex: 1 1 40%;
+  min-width: 280px;
+  max-width: 420px;
+  height: 300px;
+  overflow: hidden;
+  display: flex;
+  align-items: stretch;
+  background: #eaf5e5;
+}
+
+.marine-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s;
+}
+
+.marine-card:hover .marine-img img {
+  transform: scale(1.07);
+}
+
+.marine-content {
+  flex: 2 1 60%;
+  padding: 38px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.marine-content h3 {
+  margin: 0 0 12px 0;
+  font-size: 1.35rem;
+  color: #ffae00;
+  font-weight: 700;
+}
+
+.marine-content p {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+
+.marine-link {
+  color: #2ea44f;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 2px solid #2ea44f;
+  padding-bottom: 2px;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.marine-link:hover {
+  color: #ff6f3c;
+  border-bottom: 2px solid #ff6f3c;
+}
+
+@media (max-width: 900px) {
+  .marine-image-section {
+    gap: 28px;
+    padding: 0 8px;
+  }
+
+  .marine-card,
+  .marine-card.reverse {
+    flex-direction: column;
+    max-width: 98vw;
+  }
+
+  .marine-img {
+    max-width: 100%;
+    min-width: 0;
+    height: 160px;
+  }
+
+  .marine-content {
+    padding: 18px 12px;
+  }
+}
+
+/* ...existing code... */
+
+
+
+
+
+
+
+
+
+
 
 .marine_title {
   text-align: center;
@@ -1072,7 +1285,6 @@ div.org_name {
 }
 
 .about {
-  background-image: url("iFAW_Images/tropical_leaf.jpg");
   padding-top: 50px;
   padding-bottom: 50px;
 }
@@ -1132,9 +1344,9 @@ div.org_name {
   background-size: cover;
   background-position: center;
   border-radius: 16px;
-  min-width: 280px;
-  max-width: 340px;
-  min-height: 260px;
+  min-width: 480px;
+  max-width: 540px;
+  min-height: 460px;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
   display: flex;
   flex-direction: column;
@@ -1242,6 +1454,7 @@ div.org_name {
   cursor: default;
   width: 150px;
 }
+
 /* Button Styles */
 .button {
   appearance: none;
@@ -1283,38 +1496,6 @@ div.org_name {
   box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
 }
 
-/* Donate Section */
-.donate_section {
-  background-position: top;
-  padding: 50px 0;
-  background: radial-gradient(circle, rgba(46, 111, 64, 0.31) 47%, #fff 22%);
-}
-
-.content-donate {
-  max-width: 500px;
-  margin: auto;
-  background: linear-gradient(90deg, #000 5%, #166D3B 80%);
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-h1.donate_h1 {
-  font-size: 32px;
-  margin: 0 0 0 0;
-  color: #ffae00;
-}
-
-h2.donate_h2 {
-  font-size: 32px;
-  margin-top: 0;
-  color: #ffd900;
-}
-.button:active {
-  background-color: #298e46;
-  box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
-  width: 150px;
-}
 
 /* Donmate Section */
 
@@ -1323,19 +1504,17 @@ h2.donate_h2 {
   padding-top: 50px;
   padding-bottom: 50px;
   background: #2E6F40;
-  background: radial-gradient(circle, rgba(46, 111, 64, 0.31) 47%, rgba(255, 255, 255, 1) 22%);
+  background: radial-gradient(circle, #181c18 47%, rgba(255, 255, 255, 1) 22%);
 }
 
 
 .content-donate {
   max-width: 500px;
   margin: auto;
-  background-color: #00000049;
   padding: 30px;
+  padding-bottom: 0;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  background: #0a4a2c;
-  background: linear-gradient(90deg, #000000 5%, #166D3B 80%);
 }
 
 h1.donate_h1 {
@@ -1361,7 +1540,8 @@ p.donate_p {
   width: 500px;
   max-width: 500px;
   padding: 20px;
-  margin: 40px auto;
+  padding-bottom: 0;
+  margin: 40px auto 0;
   color: white;
   border: none;
   font-size: 20px;
@@ -1395,10 +1575,10 @@ p.donate_p {
 
 .footer-note-donate {
   font-size: 14px;
-  color: #000000;
+  color: #ffffff;
   max-width: 500px;
   margin: auto;
-  padding: 20px;
+  padding: 0;
   text-align: center;
 }
 
@@ -1556,6 +1736,12 @@ p.donate_p {
   margin-left: 10%;
 }
 
+.footer-socials {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
 .footer-links div {
   min-width: 150px;
 }
@@ -1571,144 +1757,126 @@ p.donate_p {
   text-decoration: none;
 }
 
+
+
+
+
 /* Index 2 */
-.html_index2,
-.body_index2 {
-  overflow: hidden;
-}
-
-.body_index2 {
-  margin-left: 60px;
-  overflow-x: hidden;
-  font-family: 'Inter', sans-serif;
-  margin: 0;
-  min-height: 100vh;
-}
-
-.index2_leopard {
-  display: block;
-  margin: 0 auto;
-  width: auto;
-  height: 500px;
-}
-
-div.org_name_index2 {
-  width: 100%;
-  background: rgba(0, 0, 0, 0.9);
-  padding: 15px 5%;
-  z-index: 10;
-  height: 25px;
-}
-
-div.org_name_index2 h3 {
-  color: #fbfafa;
-  margin: 0;
-}
-
-
-
-.container {
-  height: 100vw;
-  color: #fff;
-  background-size: contain;
-}
-
-
-
-.overlap-demo-container {
-  position: relative;
-  width: 60vw;
-  max-width: 1200px;
-  min-width: 0;
-  margin: 60px auto 60px 16%;
-  min-height: 320px;
+.index2-sidebyside {
   display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-}
-
-.overlap-demo-image {
-  width: 64vw;
-  min-width: 440px;
-  max-width: 620px;
-  height: 40vh;
-  min-height: 180px;
-  max-height: 400px;
-  border-radius: 16px;
-  object-fit: cover;
-  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.18);
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100vw;
+  background-image: url("iFAW_Images/deer.jpg");
+  background-size: cover;
+  box-sizing: border-box;
+  padding: 60px 0;
+  gap: 0;
   position: relative;
   z-index: 1;
-  background: #222;
-  border: 1.2px solid #222;
-  margin-right: 0;
 }
 
-.overlap-demo-card {
-  position: relative;
-  top: 1vw;
-  left: -2vw;
-  min-width: 50vw;
-  max-width: 600px;
-  background: rgba(24, 24, 24, 0.92);
-  color: #fff;
-  border-radius: 16px;
-  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.18);
-  padding: 2vw 2vw 1.5vw 2vw;
-  border: 1.2px solid rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  z-index: 2;
-  font-family: 'Inter', sans-serif;
+.index2-card-container {
+  display: flex;
+  border-radius: 32px;
+  box-shadow: 0 8px 32px rgba(44, 62, 80, 0.13);
+  overflow: hidden;
+  max-width: 1600px;
+  width: 90vw;
+  min-height: 400px;
+  margin: 0 auto;
+  /* Center horizontally */
+  gap: 0;
+  background-color: #000000;
+
+}
+
+.index2-img-side {
+  flex: 1 1 340px;
+  max-width: 800px;
+  width: 800px;
+  min-width: 260px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 56px 48px;
+}
+
+
+
+
+.index2-text-side {
+  flex: 2 1 400px;
+  padding: 56px 48px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  justify-content: center;
+  max-width: 702.5px;
+
 }
 
-.overlap-demo-card h2 {
+.index2-text-side h2 {
   font-size: 2rem;
-  font-weight: 600;
-  margin-bottom: 10px;
-  color: #fff;
+  color: green;
+  margin-bottom: 0;
+  font-weight: 800;
+
 }
 
-.overlap-demo-card p {
-  font-size: 1.05rem;
-  color: #e0e0e0;
-  line-height: 1.5;
+.index2-text-side p {
+  font-size: 1.13rem;
+  color: #222;
+  line-height: 1.7;
+  margin-top: 0;
+  color: #ffffff;
 }
 
-@media (max-width: 900px) {
-  .overlap-demo-container {
+.index2-text-side .org_name {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 18px;
+}
+
+@media (max-width: 1100px) {
+  .index2-card-container {
     flex-direction: column;
-    width: 96vw;
-    min-height: unset;
+    max-width: 98vw;
+    margin-left: 0;
+    border-radius: 32px;
   }
 
-  .overlap-demo-image {
-    width: 96vw;
-    height: 160px;
-    max-width: 96vw;
+  .index2-img-side {
+    max-width: 100vw;
     min-width: 0;
-    min-height: 120px;
+    min-height: 180px;
+    max-height: 240px;
+    margin-left: 60px;
+    border-radius: 32px 32px 0 0;
   }
 
-  .overlap-demo-card {
-    left: unset;
-    min-width: 0;
-    max-width: 96vw;
-    width: 88vw;
-    padding: 16px 8px 12px 8px;
-  }
-
-  .overlap-demo-card h2 {
-    font-size: 1.2rem;
-  }
-
-  .overlap-demo-card p {
-    font-size: 0.98rem;
+  .index2-text-side {
+    padding: 24px 12px;
+    border-radius: 0 0 32px 32px;
+    margin-left: 60px;
   }
 }
+
+
+
+
+.page {
+  display: none;
+}
+
+
+.active_page {
+  display: block;
+}
+
 
 
 
@@ -1785,6 +1953,7 @@ div.org_name_index2 h3 {
 .form {
   flex: 1 1 300px;
   padding: 30px;
+  color: black;
 }
 
 .card_index3 img {
