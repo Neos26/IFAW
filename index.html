@@ -19,21 +19,41 @@
     </nav>
 
     <main class="showcase" id="main_content">
-        <section class="hero">
-            <div class="org_name">
-                <h3>IF<span class="highlight">AW</span></h3>
-            </div>
-            <div id="title_quote">
-                <strong>
-                    <span class="highlight">Fresh thinking and bold action</span> for animals, people and the place we
-                    call home.
-                </strong>
-            </div>
 
-            <button class="donate-btn pulse donate-btn-top"
-                style="background-image: linear-gradient(30deg, rgba(13, 61, 21, 1) 4%, rgb(50, 85, 21) 66%);"
-                onclick="window.location.href='index3.html'">Donate</button>
+
+
+        <header>
+            <nav>
+                <a href="#">IFAW</a>
+            </nav>
+        </header>
+        <section class="hero">
+            <div class="hero-text">
+                <h1 class="hero-title"><span class="highlight">Fresh thinking and bold action</span> for animals, people
+                    and the place we
+                    call home.</h1>
+                </p>
+            </div>
         </section>
+        <div class="features">
+            <div class="feature">
+                <i class="fa fa-mug-hot"></i>
+                <div class="feature-title">PREPARATION</div>
+            </div>
+            <div class="feature">
+                <i class="fa fa-heartbeat"></i>
+                <div class="feature-title">HEALTH</div>
+            </div>
+            <div class="feature">
+                <i class="fa fa-seedling"></i>
+                <div class="feature-title">GARDENING</div>
+            </div>
+            <div class="feature">
+                <i class="fa fa-gift"></i>
+                <div class="feature-title">SPECIAL OFFERS</div>
+            </div>
+        </div>
+
         <div class="intro-lines top"></div>
         <section class="intro_section">
             <video class="fade-in-section" id="intro_vid" controls src="/iFAW_Images/video.mp4"></video>
@@ -43,6 +63,32 @@
                     Monthly</button>
             </div>
         </section>
+        <section class="section">
+            <div class="section-img">
+                <img src="iFAW_Images/koalas.jpg" alt="koalas">
+            </div>
+            <div class="section-content">
+                <p class="section-desc">Blog</p>
+                <h2 class="section-title">Victoria’s shameful secret: the hidden crisis facing koalas</span></h2>
+                <div class="card-tags">
+                    <a href="index2.html#leopard"><button class="button pulse">Read more</button></a>
+                </div>
+            </div>
+        </section>
+        <section class="section reverse">
+            <div class="section-content">
+                <p class="section-desc">Blog</p>
+                <h2 class="section-title">Rescuing the world’s smallest and most vulnerable bear species</span></h2>
+                <div class="card-tags">
+                    <a href="index2.html#myanmar"><button class="button pulse">Read more</button></a>
+                </div>
+            </div>
+            <div class="section-img">
+                <img src="iFAW_Images/bear.jpg" alt="bear">
+            </div>
+        </section>
+
+
         <div class="intro-lines top"></div>
 
         <section class="biodiversity-section" id="biodiversity_bookmark">
@@ -51,25 +97,14 @@
                 <div class="biodiversity-card biodiversity-card-large card-gradient-biodiversity autoShow ">
                     <div class="biodiversity-header">
                         <div class="biodiversity-text_down">
-                            <div class="rescue_type biodiversity-role">Project</div>
-                            <br>
-                            <div class="biodiversity-name">We're transforming what it means to be a woman ranger</div>
-                        </div>
-                    </div>
-                    <button onclick="window.location.href='index2.html#ranger'" class="button pulse">See project</button>
-                </div>
-                <div class="biodiversity-card biodiversity-card-small-top card-gradient-biodiversity autoShow ">
-                    <div class="biodiversity-header">
-                        <div>
                             <div class="rescue_type biodiversity-role">Room to Roam</div>
                             <br>
                             <div class="biodiversity-name">A visionary approach to conservation in Africa</div>
                         </div>
                     </div>
-                    <button onclick="window.location.href='index2.html#visionary_approach'"
-                        class="button pulse">Learn more</button>
+                    <a href="index2.html#visionary_approach"><button class="button pulse">Learn more</button></a>
                 </div>
-                <div class="biodiversity-card biodiversity-card-small-bottom card-gradient-biodiversity autoShow ">
+                <div class="biodiversity-card biodiversity-card-small-top card-gradient-biodiversity autoShow ">
                     <div class="biodiversity-header">
                         <div>
                             <div class="rescue_type biodiversity-role">Blog</div>
@@ -77,8 +112,17 @@
                             <div class="biodiversity-name">Bringing rhinos back to Manas National Park</div>
                         </div>
                     </div>
-                    <button onclick="window.location.href='index2.html#rhinos'" class="button pulse">Read
-                        more</button>
+                    <a href="index2.html#rhinos"><button class="button pulse">Read more</button></a>
+                </div>
+                <div class="biodiversity-card biodiversity-card-small-bottom card-gradient-biodiversity autoShow ">
+                    <div class="biodiversity-header">
+                        <div>
+                            <div class="rescue_type biodiversity-role">Project </div>
+                            <br>
+                            <div class="biodiversity-name">We're transforming what it means to be a woman ranger</div>
+                        </div>
+                    </div>
+                    <a href="index2.html#ranger"><button class="button pulse">See project</button></a>
                 </div>
             </div>
         </section>
@@ -92,8 +136,8 @@
                         <p class="rescue_type">Blog</p>
                         <a href="index2.html#anteater" class="rescue_title">Meet an orphaned giant anteater<br> released
                             back to the wild after Brazil’s wildfires</a>
-                        <button onclick="window.location.href='index2.html#anteater'" class="button pulse">Read
-                            more</button>
+                        <a href="index2.html#anteater"><button class="button pulse">Read
+                                more</button></a>
                     </div>
                 </div>
                 <div class="rescue_card  autoShow" style="background-image: url('iFAW_Images/black_bear.jpg');">
@@ -101,8 +145,8 @@
                         <p class="rescue_type">Blog</p>
                         <a href="index2.html#papum" class="rescue_title" style="padding-bottom: 20px;">Raising Papum, an
                             orphaned black bear cub</a>
-                        <button onclick="window.location.href='index2.html#papum'" class="button pulse">Read
-                            more</button>
+                        <a href="index2.html#papum"><button class="button pulse">Read
+                                more</button></a>
                     </div>
                 </div>
                 <div class="rescue_card  autoShow" style="background-image: url('iFAW_Images/bird.jpg');">
@@ -110,61 +154,17 @@
                         <p class="rescue_type">Project</p>
                         <a href="index2.html#birds" class="rescue_title" style="padding-bottom: 40px;">Birds of prey are
                             falling prey in China</a>
-                        <button onclick="window.location.href='index2.html#birds'" class="button pulse">See
-                            project</button>
+                        <a href="index2.html#birds"><button class="button pulse">See
+                                project</button></a>
                     </div>
                 </div>
             </div>
         </section>
         <div class="intro-lines top"></div>
 
-        <section class="climate-section" id="climate_bookmark">
-            <div class="fade_in">
-                <h2 class="climate-title autoShow">Climate</h2>
-                <div class="climate-featured-row autoShow">
-                    <div class="climate-featured-image">
-                        <img src="iFAW_Images/remote.jpg" alt="Remote, but ready">
-                    </div>
-                    <div class="climate-featured-info">
-                        <div class="climate-featured-role">Project</div>
-                        <div class="climate-featured-name">Remote, but ready</div>
-                        <div class="climate-featured-desc">
-                            <a href="index2.html#remote_Ready" class="climate-featured-desc pulse">See project</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="climate-list-row autoShow">
-                    <div class="climate-card fade_in">
-                        <div class="climate-card-image">
-                            <img src="iFAW_Images/climate_change.jpg" alt="climate change">
-                        </div>
-                        <div class="climate-card-info">
-                            <div class="climate-featured-role-wildlife">Expert opinions</div>
-                            <div class="climate-featured-name">How wildlife conservation makes communities resilient to
-                                the changing climate</div>
-                            <div class="climate-card-desc">
-                                <a href="index2.html#wildlife_climate" class="climate-featured-desc pulse">Read more</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="climate-card fade_in">
-                        <div class="climate-card-image">
-                            <img src="iFAW_Images/climate_crisis.jpg" alt="climate crisis">
-                        </div>
-                        <div class="climate-card-info">
-                            <div class="climate-featured-role">Climate change</div>
-                            <div class="climate-featured-name">Joining hands with nature to tackle the climate crisis
-                            </div>
-                            <div class="climate-card-desc">
-                                <a href="#" class="climate-featured-desc pulse">Learn more</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <div class="intro-lines top"></div>
+
+        <!-- <div class="intro-lines top"></div>
         <section class="updates custom-cards" id="updates_bookmark">
             <div class="updates-header">
                 <h1 class="titles autoShow">Updates</h1>
@@ -178,8 +178,8 @@
                         <br>
                         <br>
                         <div class="card-tags">
-                            <button onclick="window.location.href='index2.html#leopard'" class="button pulse">Read
-                                more</button>
+                            <a href="index2.html#leopard"><button class="button pulse">Read
+                                    more</button></a>
                         </div>
                     </div>
                 </div>
@@ -191,60 +191,89 @@
                         <br>
                         <br>
                         <div class="card-tags">
-                            <button onclick="window.location.href='index2.html#myanmar'" class="button pulse">Read
-                                more</button>
+                            <a href="index2.html#myanmar"><button class="button pulse">Read
+                                    more</button></a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <div class="intro-lines top"></div>
+        <div class="intro-lines top"></div> -->
 
         <section class="Marine_conservation" id="marine_bookmark">
-            <h1 class="marine_title autoShow ">Marine conservation</h1>
-            <div class="horizontal-container fade_in">
-                <div class="climate-featured-row autoShow">
-                    <div class="marine-featured-image">
-                        <img class="marine_img" src="iFAW_Images/whale.jpg" alt="whale">
+            <section class="marine-image-section">
+
+                <h1 class="marine_title autoShow ">Marine conservation</h1>
+                <div class="marine-card">
+                    <div class="marine-img">
+                        <img src="iFAW_Images/whale.jpg" alt="Whale">
                     </div>
-                    <div class="marine-featured-info">
-                        <div class="climate-featured-role">Project</div>
-                        <div class="climate-featured-name">2025 North Atlantic right whale calving season</div>
-                        <div class="climate-featured-desc">
-                            <a href="index2.html#remote_Ready" class="climate-featured-desc pulse">Learn more</a>
-                        </div>
+                    <div class="marine-content">
+                        <h3>Project</h3>
+                        <p>2025 North Atlantic right whale calving season</p>
+                        <a href="index2.html#whale" class="marine-link">Learn more</a>
                     </div>
                 </div>
-
-
-                <div class="climate-featured-row autoShow">
-                    <div class="marine-featured-image">
-                        <img class="marine_img" src="iFAW_Images/fin_whale.jpg" alt="fin whale">
+                <div class="marine-card reverse">
+                    <div class="marine-img">
+                        <img src="iFAW_Images/fin_whale.jpg" alt="Fin Whale">
                     </div>
-                    <div class="marine-featured-info">
-                        <div class="climate-featured-role">Project</div>
-                        <div class="climate-featured-name">Are fin whales finished? Japan resumes commercial hunt</div>
-                        <div class="climate-featured-desc">
-                            <a href="index2.html#remote_Ready" class="climate-featured-desc pulse">Read more</a>
-                        </div>
+                    <div class="marine-content">
+                        <h3>Project</h3>
+                        <p>Are fin whales finished? Japan resumes commercial hunt</p>
+                        <a href="index2.html#finWhale" class="marine-link">Read More</a>
                     </div>
                 </div>
-
-
-                <div class="climate-featured-row autoShow">
-                    <div class="marine-featured-image">
-                        <img class="marine_img" src="iFAW_Images/marine_mamal.jpg" alt="marine mammal">
+                <div class="marine-card">
+                    <div class="marine-img">
+                        <img src="iFAW_Images/marine_mamal.jpg" alt="Marine Mammal">
                     </div>
-                    <div class="marine-featured-info">
-                        <div class="climate-featured-role">Project</div>
-                        <div class="climate-featured-name">When the tide is low, the stakes are high for marine mammals</div>
-                        <div class="climate-featured-desc">
-                            <a href="index2.html#remote_Ready" class="climate-featured-desc pulse">See project</a>
+                    <div class="marine-content">
+                        <h3>Project</h3>
+                        <p>When the tide is low, the stakes are high for marine mammals</p>
+                        <a href="index2.html#marineMamal" class="marine-link">See project</a>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+
+
+        <!-- News & Events Section -->
+        <section class="climate-news-section" id="climate_bookmark">
+            <div class="climate-main">
+                <h2 class="climate-title">Climate</h2>
+                <div class="climate-news-grid">
+                    <div class="climate-news-item">
+                        <img src="iFAW_Images/climate_crisis.jpg" alt="Wildlife Rescue" />
+                        <div class="climate-news-content">
+                            <p>Climate change</p>
+                            <h3>Joining hands with nature to tackle the climate crisis</h3>
+                            <a href="#" class="climate-featured-desc pulse">Learn more</a>
+                        </div>
+                    </div>
+                    <div class="climate-news-item">
+                        <img src="iFAW_Images/climate_change.jpg" alt="Climate Action Workshop" />
+                        <div class="climate-news-content">
+                            <p>Expert opinions</p>
+                            <h3>How wildlife conservation makes communities resilient to
+                                the changing climate</h3>
+                            <a href="index2.html#wildlife_climate" class="climate-featured-desc pulse">Read more</a>
                         </div>
                     </div>
                 </div>
             </div>
+            <aside class="climate-events-sidebar">
+                <div class="climate-event">
+                    <img src="iFAW_Images/remote.jpg" alt="Ocean Cleanup Drive" />
+                    <p>Climate change</p>
+                    <h3>Remote, but ready</h3>
+                    <a href="index2.html#remote_Ready" class="climate-featured-desc pulse">See project</a>
+                </div>
+            </aside>
         </section>
+
+
 
         <div class="intro-lines top"></div>
         <section class="about" id="about_bookmark">
@@ -257,8 +286,8 @@
                         <p class="update_type">Ifaw</p>
                         <a href="#Rescued leopard cat cubs return to the wild" class="update_title">Our approach return
                             to the wild</a>
-                        <button class="button pulse"
-                            onclick="window.location.href='index2.html#Our_approach'">Learn more</button>
+                        <a href="index2.html#Our_approach"><button class="button pulse">Learn
+                                more</button></a>
                     </div>
                 </div>
                 <div class="about_card card-gradient-about autoShow"
@@ -266,8 +295,8 @@
                     <div class="about-card-content">
                         <p class="update_type">Campaign</p>
                         <a href="#Rescued leopard cat cubs return to the wild" class="update_title">CEO corner</a>
-                        <button class="button pulse" onclick="window.location.href='index2.html#CEO'">Read
-                            more</button>
+                        <a href="index2.html#CEO"><button class="button pulse">Read
+                                more</button></a>
                     </div>
                 </div>
                 <div class="about_card card-gradient-about autoShow"
@@ -276,8 +305,7 @@
                         <p class="update_type">Campaign</p>
                         <a href="#Rescued leopard cat cubs return to the wild" class="update_title">Academy of Rescue
                             and Conservation</a>
-                        <button class="button pulse" onclick="window.location.href='index2.html#Academy'"
-                            class="card-tag ">Read more</button>
+                        <a href="index2.html#Academy"><button class="button pulse">Read more</button></a>
                     </div>
                 </div>
             </div>
@@ -407,7 +435,7 @@
             });
         });
 
-        
+
 
         // Add active class to sidebar links based on scroll position
         const sidebarLinks = document.querySelectorAll('.sidebar a[href^="#"]');
