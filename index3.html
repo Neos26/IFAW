@@ -4,47 +4,30 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>International Fund for Animal Welfare |  IFAW</title>
+    <title>International Fund for Animal Welfare | IFAW</title>
     <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body class="body_index3">
 
-    <div class="org_name_index3">
-        <h3>IF<span style="color: #08a100; text-decoration: underline;">AW</h3>
-        <div style="width:100%;display:flex;justify-content:center;margin:48px 0 24px 0;">
-            <button class="donate-btn pulse"
-                style="background: linear-gradient(90deg, #294620 0%, #01570d 100%); max-width: 220px; font-size: 1.1rem;"
-                onclick="window.location.href='index.html#donate_bookmark'">&#8592; Back to Home</button>
-        </div>
-    </div>
-    <div class="sidebar">
-        <ul>
-            <li><a><span class="icon">☰</span><span class="text"></span></a></li>
-            <br><br>
-            <li><a href="index.html"><span class="icon">🏠</span><span class="text">Home</span></a></li>
-            <li><a href="index.html#about_bookmark"><span class="icon">🔎</span><span class="text">About us</span></a>
-            </li>
-            <li><a href="index3.html"><span class="icon">🧩</span><span class="text">Get involved</span></a></li>
-        </ul>
-    </div>
-
-
-
-
+    <nav class="bottom-nav">
+        <a href="index.html" class="bottom-nav-link active">Home</a>
+        <a href="#" class="bottom-nav-link">Animals</a>
+        <a href="#" class="bottom-nav-link">Get involved</a>
+        <a href="#" class="bottom-nav-link">Explore</a>
+        <a href="#" class="bottom-nav-link">Our work</a>
+        <a href="#about_bookmark" class="bottom-nav-link">About IFAW</a>
+        <a href="#donate_bookmark" class="bottom-nav-link">Donate</a>
+    </nav>
 
     <div class="showcase_index3 fade_in">
-
         <div class="container_index3 fade_in">
             <div class="card_index3 fade_in">
                 <h2>IF<span style="color: #08a100; text-decoration: underline;">AW</span></h2>
                 <p><strong>Help animals and people thrive together</strong></p>
-                <p>Animals worldwide face threats like poaching, trafficking, ocean hazards, disasters, and habitat
-                    loss.
+                <p>Animals worldwide face threats like poaching, trafficking, ocean hazards, disasters, and habitat loss.
                     Iconic species, critical to our planet's health, are endangered.</p>
-                <p>For over 50 years, IFAW has rescued, rehabilitated, and released animals while restoring their
-                    habitats.
+                <p>For over 50 years, IFAW has rescued, rehabilitated, and released animals while restoring their habitats.
                     Help us continue our life-saving work.
                 </p>
                 <p><strong>Donate now &gt;&gt;</strong></p>
@@ -59,11 +42,12 @@
                 <div class="note">The most effective way to support the cause</div>
 
                 <div class="amounts">
-                    <div class="amount-btn" onclick="selectAmount(this, 20)">$20</div>
-                    <div class="amount-btn selected" onclick="selectAmount(this, 50)">$50</div>
+                    <div class="amount-btn" onclick="selectAmount(this, 15)">$15</div>
+                    <div class="amount-btn" onclick="selectAmount(this, 60)">$60</div>
                     <div class="amount-btn" onclick="selectAmount(this, 100)">$100</div>
-                    <div class="amount-btn" onclick="selectAmount(this, 200)">$200</div>
+                    <div class="amount-btn" onclick="selectAmount(this, 250)">$250</div>
                     <div class="amount-btn" onclick="selectAmount(this, 500)">$500</div>
+                    <div class="amount-btn selected" onclick="selectAmount(this, 1000)">$1000</div>
                 </div>
 
                 <div class="custom-amount">
@@ -78,7 +62,6 @@
                 <button class="donate-btn" onclick="donate()">Complete Donation</button>
             </div>
         </div>
-    </div>
     </div>
 
     <script>
