@@ -1,10 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-
-* {
-  font-family: 'Inter', sans-serif;
-}
-
-
 :root {
   --green: #b6ff7a;
   --dark-bg: #181c18;
@@ -16,98 +9,74 @@
 
 body {
   background: var(--dark-bg);
-  color: var(--white);
   font-family: 'Montserrat', Arial, sans-serif;
   margin: 0;
   padding: 0;
+  margin: auto;
+  height: auto;
   overflow-x: hidden;
 }
-
 
 .showcase {
   height: 1000px;
+  margin: auto;
 }
 
-/* Sidebar */
-.sidebar {
+.bottom-nav {
   position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 60px;
-  background: #182113;
-  overflow-x: hidden;
-  transition: width 0.3s ease;
-  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(18, 24, 18, 0.95);
+  border-radius: 16px;
+  box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.7);
+  display: flex;
+  gap: 24px;
+  padding: 12px 36px;
   z-index: 1000;
+  align-items: center;
 }
 
-.sidebar:hover {
-  width: 200px;
-}
-
-.sidebar ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.sidebar li a {
+.bottom-nav-link {
+  color: #d8ffd8;
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 8px 18px;
+  border-radius: 8px;
+  transition: background 0.2s, color 0.2s;
   display: flex;
   align-items: center;
-  padding: 12px 16px;
-  color: #fff;
-  text-decoration: none;
-  white-space: nowrap;
-  overflow: hidden;
-  transition: background 0.3s;
-}
-
-.sidebar li a:hover,
-.sidebar li a.active {
-  background: #adbfd3;
-  color: #fff;
-}
-
-.sidebar li a.active {
-  background: #008321a6;
-}
-
-.sidebar .icon {
-  display: inline-block;
-  min-width: 24px;
-  text-align: center;
-  font-size: 20px;
-}
-
-.sidebar .text {
-  opacity: 0;
-  margin-left: 12px;
-  transition: opacity 0.3s;
+  gap: 8px;
+  position: relative;
   white-space: nowrap;
 }
 
-.sidebar:hover .text {
-  opacity: 1;
+.bottom-nav-link.active,
+.bottom-nav-link:hover {
+  background: #1a2e1a;
+  color: #aaffaa;
+}
+
+@media (max-width: 600px) {
+  .bottom-nav {
+    padding: 8px 8px;
+    gap: 8px;
+    font-size: 0.95rem;
+  }
+
+  .bottom-nav-link {
+    padding: 6px 10px;
+  }
 }
 
 /* Headings */
-
+div.org_name {
+  z-index: 1000;
+}
 
 .highlight {
   color: #08a100;
-}
-
-h1.titles,
-.page-title,
-.marine_title,
-.about_title,
-.recue_title,
-.page_title_climate {
-  margin: 30px 0 60px 60px;
-  font-size: 100px;
-  text-align: center;
-  color: #ffffff;
 }
 
 h3 {
@@ -120,10 +89,14 @@ div.org_name h3 {
   margin: 0;
 }
 
+.intro-top-line {
+  width: 100%;
+  height: 10px;
+  background: linear-gradient(to right, #b6ff7a, #408a36);
+  margin: 20px auto;
+}
+
 /* Hero Section */
-
-
-
 header {
   background: rgb(0, 17, 6);
   display: flex;
@@ -152,7 +125,7 @@ nav a:hover {
 
 .hero {
   background: linear-gradient(rgba(24, 28, 24, 0.6), rgba(24, 28, 24, 0.6)), url('iFAW_Images/tiger.jpg') center/cover no-repeat;
-  min-height: 70vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -164,10 +137,10 @@ nav a:hover {
 .hero-text {
   max-width: 600px;
   margin-left: 60px;
+  margin-bottom: 300px;
 }
 
 .hero-title {
-  font-family: 'Pacifico', cursive;
   font-size: 3rem;
   font-weight: 700;
   color: var(--white);
@@ -176,7 +149,6 @@ nav a:hover {
 }
 
 .hero-subtitle {
-  font-family: 'Pacifico', cursive;
   font-size: 2.2rem;
   color: var(--green);
   margin-top: 0;
@@ -192,77 +164,61 @@ nav a:hover {
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
 }
 
-
-.features {
-  background: var(--card-bg);
-  border-radius: 40px;
-  margin: -60px auto 0 auto;
-  padding: 30px 40px;
-  display: flex;
-  justify-content: center;
-  gap: 60px;
-  max-width: 800px;
-  position: relative;
-  z-index: 2;
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.18);
-}
-
-.feature {
-  text-align: center;
-  color: var(--green);
-  min-width: 100px;
-}
-
-.feature i {
-  font-size: 2rem;
-  margin-bottom: 8px;
-  color: var(--green);
-}
-
-.feature-title {
-  color: var(--white);
-  font-size: 1rem;
-  font-weight: 700;
-  margin-top: 6px;
-}
-
 .section {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 60px;
-  gap: 40px;
-  padding-top: 100px;
+  width: 80%;
+  margin: auto;
+  padding-top: 0;
 }
 
+.section-content-wrapper {
+  border: 4px solid #ffffff;
+  border-radius: 18px;
+  padding: 20px;
+  background: #fff;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 1600px;
+  /* Optional: set a max width for the wrapper */
+  margin: auto;
+}
+
+.section-img img {
+  border-radius: 15px;
+  object-fit: cover;
+  background: var(--green);
+  padding: 10px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.18);
+  border: none;
+  display: block;
+  margin: 0 auto;
+}
 
 .section.reverse {
   flex-direction: row-reverse;
+  padding-top: 0;
+  margin-top: 0;
 }
 
 .section-img {
   flex: 1;
   display: flex;
   justify-content: center;
-}
-
-.section-img img {
-  border-radius: 50%;
-  width: 260px;
-  height: 260px;
-  object-fit: cover;
-  background: var(--green);
-  padding: 10px;
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.18);
+  min-width: 0;
 }
 
 .section-content {
-  flex: 2;
+  flex: 1;
+  min-width: 0;
 }
 
 .section-title {
-  font-family: 'Pacifico', cursive;
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: var(--white);
   margin-bottom: 10px;
   line-height: 1.2;
@@ -270,36 +226,17 @@ nav a:hover {
 
 .section-title span {
   color: var(--green);
-  font-family: inherit;
 }
 
 .section-desc {
-  color: var(--gray);
-  font-size: 1.1rem;
+  color: #ffa500;
+  font-size: 0.9rem;
   margin-bottom: 20px;
   line-height: 1.6;
 }
 
-.shop-btn {
-  background: var(--green);
-  color: #222;
-  border: none;
-  padding: 12px 28px;
-  border-radius: 30px;
-  font-weight: bold;
-  cursor: pointer;
-  font-size: 1rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
-  transition: background 0.2s;
-}
-
-.shop-btn:hover {
-  background: #d0ffb6;
-}
-
 /* Responsive */
 @media (max-width: 1100px) {
-
   .section,
   .hero,
   header {
@@ -321,7 +258,6 @@ nav a:hover {
 }
 
 @media (max-width: 700px) {
-
   .section,
   .hero,
   header {
@@ -338,77 +274,13 @@ nav a:hover {
   }
 }
 
-
-
-
-
-/* .hero {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/iFAW_Images/tiger.jpg') center/cover;
-}
-
-
-
-.intro_section,
-.updates,
-.biodiversity-section,
-.climate-section,
-.Marine_conservation,
-.about,
-.donate_section {
-  box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.04);
-}
-
-
-
-
-.intro-lines {
-  width: 100%;
-  height: 30px;
-  background: linear-gradient(90deg, #021c01 0%, #857700 100%);
-  border-radius: 2px;
-}
-
-.intro-lines.top {
-  margin-top: 0;
-}
-
-.intro-lines.bottom {
-  margin-bottom: 0;
-}
-
-div.org_name {
-  width: 100%;
-  background: rgba(5, 5, 5, 0.7);
-  padding: 15px 5%;
-  z-index: 10;
-}
-
-#title_quote {
-  color: #fff;
-  font-size: 3vw;
-  padding: 20px;
-  border-radius: 15px;
-  margin: 10% 0 0 5%;
-  max-width: 40%;
-  text-align: left;
-  z-index: 10;
-} */
-
 /* Intro Section */
 .intro_section {
   display: flex;
   flex-direction: column;
+  padding: 3%;
   align-items: center;
-  padding-left: 7%;
-  padding-right: 4%;
-  padding-top: 3%;
+  padding-bottom: 50px;
   gap: 20px;
   background: url(--dark_bg);
 }
@@ -419,7 +291,6 @@ div.org_name {
   max-width: 100%;
   min-width: 0;
   display: block;
-  margin: 0 auto 24px auto;
   box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 1);
   background: #000;
   height: 60vw;
@@ -427,9 +298,7 @@ div.org_name {
   max-height: 800px;
   aspect-ratio: 16 / 6;
   object-fit: cover;
-
 }
-
 
 #sub_caption .intro-btn {
   font-size: 2.5vw;
@@ -452,7 +321,7 @@ div.org_name {
 
 #intro_caption,
 #sub_caption {
-  color: #ffffff;
+  color: #b6ff7a;
   text-align: center;
 }
 
@@ -463,7 +332,6 @@ div.org_name {
 #sub_caption {
   font-size: 2vw;
 }
-
 
 /* Responsive Tweaks */
 @media (max-width: 768px) {
@@ -496,122 +364,63 @@ div.org_name {
   }
 }
 
-/* Updates Section */
-
-
-
-
-.custom-cards .update_cards_container {
-  display: flex;
-  gap: 60px;
-  justify-content: center;
-  flex-wrap: wrap;
-  background: none;
+/*blog section */
+.blog-section {
+  background: (--dark-bg);
+  margin-top: 60px;
   margin-bottom: 60px;
 }
 
-
-
-.updates {
-  padding-bottom: 50px;
-  padding-top: 50px;
+.blog-title {
+  text-align: center;
+  font-size: 100px;
+  color: #b6ff7a;
+  margin-bottom: 32px;
 }
 
-.card-gradient {
-  background-size: cover;
-  background-position: center;
-  border-radius: 18px;
-  color: #fff;
-  padding: 32px 28px 24px 28px;
-  min-width: 320px;
-  max-width: 400px;
-  flex: 1 1 320px;
-  box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.12);
+.blog-stories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.blog-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  position: relative;
-  overflow: hidden;
+  transition: box-shadow 0.2s;
 }
 
-.card-gradient::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%);
-  z-index: 0;
-  transition: opacity 0.4s;
+.blog-card:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.13);
 }
 
-.card-gradient:hover::before {
-  opacity: 0;
+.blog-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
 }
 
-.card-gradient .card-title,
-.card-gradient .card-desc {
-  position: relative;
-  z-index: 1;
-  transition: opacity 0.4s;
+.blog-content {
+  padding: 20px;
 }
 
-.card-gradient:hover .card-title,
-.card-gradient:hover .card-desc {
-  opacity: 0;
+.blog-content h3 {
+  margin: 0 0 12px 0;
+  font-size: 1.2rem;
+  color: #182113;
 }
 
-
-.card-gradient:hover .card-tag {
-  background: #fff;
-  color: #222;
-  border: 1px solid #fff;
-}
-
-
-.card-content {
-  position: relative;
-  z-index: 1;
-}
-
-.card-title {
-  font-size: 1.5rem;
+.blog-content p {
+  font-size: 1.2rem;
+  color: #ffae00;
+  font-weight: bold;
   margin-bottom: 16px;
-  font-weight: 600;
-}
-
-.card-desc {
-  font-size: 1rem;
-  margin-bottom: 24px;
-  opacity: 0.95;
-}
-
-.card-tags {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-.card-tag {
-  color: #fff;
-  border-radius: 16px;
-  padding: 6px 16px;
-  font-size: 0.95em;
-  margin-top: 8px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  display: inline-block;
-  border: none;
-  background: rgba(255, 255, 255, 0.12);
-  cursor: pointer;
-}
-
-@media (max-width: 900px) {
-  .custom-cards .update_cards_container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .card-gradient {
-    max-width: 90vw;
-  }
 }
 
 /* Biodiversity Section */
@@ -630,9 +439,8 @@ div.org_name {
   font-weight: 700;
   text-align: center;
   margin-bottom: 60px;
-  color: #042d01;
+  color: #074e00;
 }
-
 
 .card-gradient-biodiversity {
   background-size: cover;
@@ -674,7 +482,6 @@ div.org_name {
   opacity: 0;
 }
 
-
 .card-gradient-biodiversity:hover .biodiversity-link {
   background: #fff;
   color: #222;
@@ -684,10 +491,10 @@ div.org_name {
 
 .biodiversity-grid {
   display: grid;
-  grid-template-columns: 1.2fr 1fr;
+  grid-template-columns: 1fr 1.2fr;
   grid-template-rows: 2fr 2fr;
   gap: 28px 32px;
-  max-width: 1500px;
+  max-width: 1200px;
   width: 100%;
   margin: 0 auto;
   padding-bottom: 220px;
@@ -695,8 +502,8 @@ div.org_name {
 
 .biodiversity-card-large {
   grid-row: 1 / span 2;
-  grid-column: 1 / 2;
-  min-height: 600px;
+  grid-column: 2 / 3;
+  min-height: 400px;
   position: relative;
   background-image: url(iFAW_Images/visionary.jpg);
   background-repeat: no-repeat;
@@ -704,7 +511,7 @@ div.org_name {
 }
 
 .biodiversity-card-small-top {
-  min-height: 300px;
+  min-height: 200px;
   /* was 240px, now doubled */
   background-image: url(iFAW_Images/rhino.jpg);
   background-repeat: no-repeat;
@@ -712,40 +519,43 @@ div.org_name {
 }
 
 .biodiversity-card-small-bottom {
-  min-height: 300px;
+  min-height: 200px;
   /* was 240px, now doubled */
   background-image: url(iFAW_Images/ranger.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-
 .biodiversity-header {
   display: flex;
   align-items: center;
   gap: 18px;
   margin-bottom: 16px;
-
 }
 
 .biodiversity-text_down {
-  margin-top: 200px;
+  margin-top: 500px;
 }
 
 .biodiversity-name {
-  font-size: 1.25rem;
-  font-weight: 700;
+  font-size: 2rem;
+  font-weight: 800;
   color: #ffffff;
 }
 
-.biodiversity-role {
-  font-size: 1rem;
-  color: #008cff;
-
+.biodiversity-role-top {
+  color: #ffae00;
+  font-size: 1.8rem;
+  font-weight: bold;
+  padding-top: 50px;
 }
 
-
-
+.biodiversity-role {
+  color: #ffae00;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-top: 100px;
+}
 
 @media (max-width: 900px) {
   .biodiversity-grid {
@@ -765,12 +575,7 @@ div.org_name {
   }
 }
 
-
-
-
-
 @media (max-width: 900px) {
-
   .intro_section,
   .updates,
   .biodiversity-section,
@@ -788,17 +593,27 @@ div.org_name {
   .marine_title,
   .about_title,
   .recue_title,
+  .biodiversity-title,
+  .page_title_climate,
+  .climate-title,
   .page_title_climate {
     font-size: 32px;
     margin: 20px 0 20px 0;
   }
 }
 
-
 /* Rescue Card Layout & Hover Effect */
+.recue_title {
+  margin: auto;
+  font-size: 100px;
+  text-align: center;
+  color: #b6ff7a;
+  margin-bottom: 40px;
+}
+
 .rescue_container {
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 .wildlife_rescue {
@@ -806,9 +621,7 @@ div.org_name {
   gap: 28px;
   justify-content: center;
   flex-wrap: wrap;
-  margin-left: 60px;
   margin-bottom: 60px;
-
 }
 
 .rescue_card {
@@ -817,10 +630,10 @@ div.org_name {
   border-radius: 18px;
   color: #fff;
   padding: 32px 28px 24px 28px;
-  min-width: 420px;
-  max-width: 500px;
-  min-height: 300px;
-  max-height: 300px;
+  min-width: 320px;
+  max-width: 400px;
+  min-height: 200px;
+  max-height: 200px;
   flex: 1 1 320px;
   box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 1);
   display: flex;
@@ -828,7 +641,6 @@ div.org_name {
   justify-content: flex-end;
   position: relative;
   overflow: hidden;
-
 }
 
 .rescue_card::before {
@@ -844,7 +656,6 @@ div.org_name {
   opacity: 0;
 }
 
-
 .rescue-content {
   position: relative;
   z-index: 1;
@@ -859,7 +670,6 @@ div.org_name {
   opacity: 0;
 }
 
-
 .rescue_card:hover .rescue_subcaption {
   color: #ffffff;
   background: #055d01;
@@ -871,7 +681,9 @@ div.org_name {
 
 .rescue_type {
   color: #ffae00;
-
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin: 0;
 }
 
 .rescue_title,
@@ -881,319 +693,253 @@ div.org_name {
   margin-left: 0;
 }
 
-.rescue_type {
-  font-weight: bold;
-  margin-top: 10px;
-}
-
 .rescue_title {
-  font-size: 20px;
+  font-size: 1.5rem;
   text-decoration: none;
   display: block;
+  color: #ffffff;
+  font-weight: 800;
+  margin-top: 0;
 }
 
 .rescue_subcaption {
-  font-size: 14px;
+  font-size: 1.3rem;
   text-decoration: underline;
   display: block;
 }
 
-
-
-
-/* Climate Section */
-
-.climate-news-section {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 40px;
-  border-radius: 32px;
-  padding: 40px 48px;
-  margin: 60px auto;
-  max-width: 1800px;
-  align-items: start;
-}
-
-.climate-main {
-  display: flex;
-  flex-direction: column;
+/* Climate */
+.climate-section {
+  background: (--dark-bg);
 }
 
 .climate-title {
-  font-size: 100px;
-  font-weight: 800;
-  color: #b6ff7a;
-  margin-bottom: 28px;
-  letter-spacing: 2px;
-}
-
-.climate-news-grid {
-  padding-top: 100px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 32px;
-}
-
-.climate-news-item {
-  background: rgba(35, 35, 35, 0.92);
-  border-radius: 24px;
-  padding: 18px 18px 18px 18px;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.climate-news-item img {
-  width: 100%;
-  height: 120px;
-  object-fit: cover;
-  border-radius: 14px;
-  margin-bottom: 14px;
-}
-
-.climate-news-content h3 {
-  color: #b6ff7a;
-  font-size: 1.15rem;
-  margin: 0 0 8px 0;
-}
-
-.climate-news-content p {
-  color: #fff;
-  font-size: 1rem;
-  margin: 0;
-}
-
-.climate-events-sidebar {
-  background: rgba(35, 35, 35, 0.92);
-  border-radius: 24px;
-  padding: 24px 18px;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
-  display: flex;
-  flex-direction: column;
-  gap: 28px;
-  min-width: 260px;
-  align-items: left;
-  margin-top: 145px;
-}
-
-
-.climate-event {
-  display: flex;
-  flex-direction: column;
-  align-items: left;
-  height: 400px;
-}
-
-.climate-event img {
-  width: 100%;
-  height: 334px;
-  object-fit: cover;
-  border-radius: 10px;
-  margin-bottom: 10px;
-}
-
-.climate-event h3 {
-  color: #b6ff7a;
-  font-size: 1.08rem;
-  margin: 0 0 4px 0;
-  text-align: left;
-}
-
-.climate-event span {
-  color: #e0e0e0;
-  font-size: 0.98rem;
-  margin-bottom: 6px;
   text-align: center;
-  display: block;
+  font-size: 100px;
+  color: #b6ff7a;
+  margin-bottom: 32px;
 }
 
-.climate-event p {
-  color: #fff;
-  font-size: 0.98rem;
-  text-align: left;
-  margin: 0;
+.climate-stories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
-@media (max-width: 900px) {
-  .climate-news-section {
-    grid-template-columns: 1fr;
-    padding: 24px 10px;
-    gap: 24px;
-  }
-
-  .climate-news-grid {
-    grid-template-columns: 1fr;
-    gap: 18px;
-  }
-
-  .climate-events-sidebar {
-    min-width: unset;
-    width: 100%;
-    flex-direction: row;
-    gap: 16px;
-    padding: 18px 12px;
-  }
-
-  .climate-event {
-    flex: 1;
-    margin-bottom: 0;
-  }
+.climate-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.2s;
 }
 
+.climate-card:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.13);
+}
+
+.climate-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.climate-content {
+  padding: 20px;
+}
+
+.climate-content h3 {
+  margin: 0 0 12px 0;
+  font-size: 1.2rem;
+  color: #182113;
+}
+
+.climate-content p {
+  font-size: 1.2rem;
+  color: #ffae00;
+  margin-bottom: 16px;
+  font-weight: bold;
+}
+
+.button_left {
+  margin-top: 25px;
+}
+
+.button_right {
+  margin-top: 45px;
+}
 
 /* Marine Conservation */
-
-.Marine_conservation {
-  padding: 20px 0 100px 60px;
-  background-color: white;
+.marine-section {
   /* background: #0d3d15;
-  background: linear-gradient(338deg, #2E6F40 1%, rgba(255, 255, 255, 1) 75%); */
-  /*background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("marine.jpg") no-repeat center/cover;*/
-}
-
-
-.marine-image-section {
+  background: linear-gradient(0deg, #2E6F40 1%, rgba(255, 255, 255, 1) 66%); */
+  padding: 60px 0;
   display: flex;
   flex-direction: column;
-  gap: 48px;
-  max-width: 70%;
-  margin: 80px auto 60px auto;
+  align-items: center;
+  background-color: white;
 }
 
-.marine-card {
+.marine-title {
+  font-size: 100px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 60px;
+  color: #074e00;
+}
+
+.card-gradient-biodiversity {
+  background-size: cover;
+  background-position: center;
+  border-radius: 18px;
+  color: #fff;
+  padding: 32px 28px 24px 28px;
+  flex: 1 1 320px;
+  box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.12);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+
+.card-gradient-biodiversity::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%);
+  z-index: 0;
+  transition: opacity 0.4s;
+}
+
+.card-gradient-biodiversity:hover::before {
+  opacity: 0;
+}
+
+.card-gradient-biodiversity .marine-name,
+.card-gradient-biodiversity .marine-role {
+  position: relative;
+  z-index: 1;
+  transition: opacity 0.4s;
+}
+
+.card-gradient-biodiversity:hover .marine-name,
+.card-gradient-biodiversity:hover .marine-role {
+  opacity: 0;
+}
+
+.card-gradient-biodiversity:hover .marine-link {
+  background: #fff;
+  color: #222;
+  width: fit-content;
+  border-radius: 5px;
+}
+
+.marine-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  grid-template-rows: 2fr 2fr;
+  gap: 28px 32px;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding-bottom: 220px;
+}
+
+.marine-card-large {
+  grid-row: 1 / span 2;
+  grid-column: 2 / 3;
+  min-height: 400px;
+  position: relative;
+  background-image: url(iFAW_Images/whale.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.marine-card-small-top {
+  min-height: 200px;
+  /* was 240px, now doubled */
+  background-image: url(iFAW_Images/fin_whale.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.marine-card-small-bottom {
+  min-height: 200px;
+  /* was 240px, now doubled */
+  background-image: url(iFAW_Images/marine_mamal.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.marine-header {
   display: flex;
   align-items: center;
-  background: #232323EB;
-  border-radius: 22px;
-  box-shadow: 0 8px 32px rgba(44, 62, 80, 0.13);
-  overflow: hidden;
-  transition: box-shadow 0.25s, transform 0.25s;
-
-}
-
-.marine-card:hover {
-  box-shadow: 0 16px 48px rgba(44, 62, 80, 0.18);
-  transform: translateY(-8px) scale(1.03);
-}
-
-.marine-card.reverse {
-  flex-direction: row-reverse;
-  background: #232323EB;
-}
-
-.marine-img {
-  flex: 1 1 40%;
-  min-width: 280px;
-  max-width: 420px;
-  height: 300px;
-  overflow: hidden;
-  display: flex;
-  align-items: stretch;
-  background: #eaf5e5;
-}
-
-.marine-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.3s;
-}
-
-.marine-card:hover .marine-img img {
-  transform: scale(1.07);
-}
-
-.marine-content {
-  flex: 2 1 60%;
-  padding: 38px 32px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.marine-content h3 {
-  margin: 0 0 12px 0;
-  font-size: 1.35rem;
-  color: #ffae00;
-  font-weight: 700;
-}
-
-.marine-content p {
-  font-size: 1rem;
-  font-weight: bold;
-  color: #ffffff;
+  gap: 18px;
   margin-bottom: 16px;
 }
 
-.marine-link {
-  color: #2ea44f;
-  font-weight: 600;
-  text-decoration: none;
-  border-bottom: 2px solid #2ea44f;
-  padding-bottom: 2px;
-  transition: color 0.2s, border-color 0.2s;
+.marine-text_down {
+  margin-top: 500px;
 }
 
-.marine-link:hover {
-  color: #ff6f3c;
-  border-bottom: 2px solid #ff6f3c;
+.marine-name {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.marine-name-large {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 50px;
+}
+
+.marine-role {
+  color: #ffae00;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-top: 100px;
 }
 
 @media (max-width: 900px) {
-  .marine-image-section {
-    gap: 28px;
-    padding: 0 8px;
-  }
-
-  .marine-card,
-  .marine-card.reverse {
+  .marine-grid {
+    display: flex;
     flex-direction: column;
+    gap: 24px;
     max-width: 98vw;
   }
 
-  .marine-img {
-    max-width: 100%;
+  .marine-card {
     min-width: 0;
-    height: 160px;
+    width: 100%;
   }
 
-  .marine-content {
-    padding: 18px 12px;
+  .marine-card-large {
+    min-height: 180px;
   }
 }
-
-/* ...existing code... */
-
-
-
-
-
-
-
-
-
-
 
 .marine_title {
   text-align: center;
   margin-bottom: 60px;
   font-size: 100px;
-  color: #042d01;
+  color: #074e00;
+  margin: auto;
 }
 
 .horizontal-container {
   display: flex;
   flex-direction: column;
-  margin-left: 10%;
-  margin-right: 10%;
   border-radius: 15PX;
   padding-top: 20px;
   padding-bottom: 20px;
 }
-
-
 
 .marine-featured-image img {
   width: 100%;
@@ -1201,7 +947,6 @@ div.org_name {
   object-fit: cover;
   min-height: 260px;
   display: block;
-
 }
 
 .marine-featured-info {
@@ -1219,7 +964,6 @@ div.org_name {
   filter: brightness(50%);
 }
 
-
 .info-box {
   display: flex;
   flex-direction: row;
@@ -1230,7 +974,6 @@ div.org_name {
   box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.5);
   background-color: white;
   width: 100%;
-
 }
 
 .marine_image_wrapper img,
@@ -1255,25 +998,32 @@ div.org_name {
 
 .type-label {
   font-weight: bold;
+  font-size: 1.8rem;
   color: #ffae00;
   margin-bottom: 8px;
-  margin-left: 20px;
 }
 
 .title {
-  font-size: 1.2rem;
-  color: #000000;
+  font-size: 2rem;
+  color: #ffffff;
   margin: 10px 0 10px 20px;
+  font-weight: 800;
 }
 
 .subcaption {
   color: #408a36;
   text-decoration: none;
-  font-weight: bold;
+  font-size: 1.8rem;
   margin-left: 20px;
 }
 
 /* About Section */
+.about_title {
+  font-size: 100px;
+  text-align: center;
+  color: #b6ff7a;
+}
+
 .about_cards_container {
   display: flex;
   gap: 100px;
@@ -1288,8 +1038,6 @@ div.org_name {
   padding-top: 50px;
   padding-bottom: 50px;
 }
-
-
 
 .card-gradient {
   background-size: cover;
@@ -1333,7 +1081,6 @@ div.org_name {
   opacity: 0;
 }
 
-
 .card-gradient-about:hover .update_subcaption {
   background: #fff;
   color: #222;
@@ -1344,9 +1091,9 @@ div.org_name {
   background-size: cover;
   background-position: center;
   border-radius: 16px;
-  min-width: 480px;
-  max-width: 540px;
-  min-height: 460px;
+  min-width: 280px;
+  max-width: 340px;
+  min-height: 260px;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
   display: flex;
   flex-direction: column;
@@ -1397,7 +1144,6 @@ div.org_name {
   }
 }
 
-
 .about-button {
   z-index: 122;
   border-radius: 8px;
@@ -1405,11 +1151,8 @@ div.org_name {
   background-color: #408a36;
   color: #ffffff;
   border: none;
-
-
 }
 
-/* CSS */
 .button {
   appearance: none;
   background-color: #2ea44f;
@@ -1420,7 +1163,6 @@ div.org_name {
   color: #fff;
   cursor: pointer;
   display: inline-block;
-  font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
   font-size: 14px;
   font-weight: 600;
   line-height: 20px;
@@ -1428,6 +1170,7 @@ div.org_name {
   position: relative;
   text-align: center;
   width: 150px;
+  text-decoration: none;
 }
 
 .button:focus:not(:focus-visible):not(.focus-visible) {
@@ -1455,66 +1198,22 @@ div.org_name {
   width: 150px;
 }
 
-/* Button Styles */
-.button {
-  appearance: none;
-  background-color: #2ea44f;
-  border: 1px solid rgba(27, 31, 35, .15);
-  border-radius: 6px;
-  box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
-  color: #fff;
-  cursor: pointer;
-  display: inline-block;
-  font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 20px;
-  padding: 6px 16px;
-  text-align: center;
-  width: 150px;
-  transition: background-color 0.2s, box-shadow 0.2s;
-}
-
-.button:focus {
-  box-shadow: rgba(46, 164, 79, .4) 0 0 0 3px;
-  outline: none;
-}
-
-.button:hover {
-  background-color: #2c974b;
-}
-
-.button:disabled {
-  background-color: #94d3a2;
-  border-color: rgba(27, 31, 35, .1);
-  color: rgba(255, 255, 255, .8);
-  cursor: default;
-}
-
-.button:active {
-  background-color: #298e46;
-  box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
-}
-
-
-/* Donmate Section */
-
+/* Donate Section */
 .donate_section {
   background-position: top;
   padding-top: 50px;
   padding-bottom: 50px;
-  background: #2E6F40;
   background: radial-gradient(circle, #181c18 47%, rgba(255, 255, 255, 1) 22%);
+  margin: auto;
 }
-
 
 .content-donate {
   max-width: 500px;
   margin: auto;
-  padding: 30px;
   padding-bottom: 0;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background: none;
 }
 
 h1.donate_h1 {
@@ -1542,23 +1241,6 @@ p.donate_p {
   padding: 20px;
   padding-bottom: 0;
   margin: 40px auto 0;
-  color: white;
-  border: none;
-  font-size: 20px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  border-radius: 0;
-  background: linear-gradient(90deg, #021c01 0%, #857700 100%);
-}
-
-
-.donate-btn-top {
-  width: 500px;
-  max-width: 500px;
-  padding: 20px;
-  margin-left: 120px;
-  margin-top: 100px;
   color: white;
   border: none;
   font-size: 20px;
@@ -1613,7 +1295,6 @@ p.donate_p {
 }
 
 @keyframes pulse {
-
   0%,
   100% {
     transform: scale(1);
@@ -1757,10 +1438,6 @@ p.donate_p {
   text-decoration: none;
 }
 
-
-
-
-
 /* Index 2 */
 .index2-sidebyside {
   display: flex;
@@ -1789,7 +1466,6 @@ p.donate_p {
   /* Center horizontally */
   gap: 0;
   background-color: #000000;
-
 }
 
 .index2-img-side {
@@ -1805,9 +1481,6 @@ p.donate_p {
   padding: 56px 48px;
 }
 
-
-
-
 .index2-text-side {
   flex: 2 1 400px;
   padding: 56px 48px;
@@ -1815,7 +1488,6 @@ p.donate_p {
   flex-direction: column;
   justify-content: center;
   max-width: 702.5px;
-
 }
 
 .index2-text-side h2 {
@@ -1823,7 +1495,6 @@ p.donate_p {
   color: green;
   margin-bottom: 0;
   font-weight: 800;
-
 }
 
 .index2-text-side p {
@@ -1854,35 +1525,22 @@ p.donate_p {
     min-width: 0;
     min-height: 180px;
     max-height: 240px;
-    margin-left: 60px;
     border-radius: 32px 32px 0 0;
   }
 
   .index2-text-side {
     padding: 24px 12px;
     border-radius: 0 0 32px 32px;
-    margin-left: 60px;
   }
 }
-
-
-
 
 .page {
   display: none;
 }
 
-
 .active_page {
   display: block;
 }
-
-
-
-
-
-
-
 
 .card_hover {
   transition: all 0.3s;
@@ -1905,9 +1563,6 @@ p.donate_p {
 .depth_shadow {
   box-shadow: 0 30px 50px rgba(0, 0, 0, 0.3);
 }
-
-
-
 
 /* Index 3 */
 .org_name_index3 {
@@ -2012,8 +1667,15 @@ p.donate_p {
 .amounts {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-  margin-bottom: 15px;
+  justify-content: center;
+  /* Center all amount buttons */
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.amount-btn {
+  min-width: 80px;
+  text-align: center;
 }
 
 .amount-btn {
@@ -2076,7 +1738,6 @@ p.donate_p {
   animation: fadeIn 1s ease-out;
 }
 
-
 @media (max-width: 768px) {
   .donate-btn-top {
     margin-left: auto;
@@ -2096,25 +1757,80 @@ p.donate_p {
   }
 }
 
+/* --- Add/Improve Responsive Styles --- */
 
+/* For laptops (max-width: 1200px) */
+@media (max-width: 1200px) {
+  .section {
+    flex-direction: column;
+    padding: 30px 20px;
+    width: 98vw;
+  }
 
-/* --- Responsive Design for Mobile Devices --- */
+  .section-content-wrapper {
+    flex-direction: column;
+    margin-left: 0;
+    max-width: 98vw;
+    padding: 16px;
+  }
+
+  .section-img img {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 18px;
+  }
+
+  .section-content {
+    width: 100%;
+    min-width: 0;
+  }
+}
+
+/* For tablets and small laptops (max-width: 900px) */
 @media (max-width: 900px) {
+  .section {
+    flex-direction: column;
+    padding: 18px 6px;
+    width: 100vw;
+  }
 
-  /* Sidebar: make horizontal or collapsible */
+  .section-content-wrapper {
+    flex-direction: column;
+    align-items: stretch;
+    margin-left: 0;
+    max-width: 100vw;
+    padding: 10px;
+  }
+
+  .section-img {
+    width: 100%;
+    margin-bottom: 12px;
+    justify-content: center;
+  }
+
+  .section-img img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin: 0 auto 12px auto;
+    display: block;
+  }
+
+  .section-content {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+
   .sidebar {
-    position: fixed;
     width: 100vw;
     height: 50px;
+    flex-direction: row;
     top: 0;
     left: 0;
-    flex-direction: row;
-    z-index: 1001;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
   }
 
   .sidebar ul {
-    display: flex;
     flex-direction: row;
     width: 100vw;
     justify-content: space-around;
@@ -2140,209 +1856,44 @@ p.donate_p {
   }
 }
 
-@media (max-width: 900px) {
-
-  /* Headings */
-  h1.titles,
-  .page-title,
-  .marine_title,
-  .about_title,
-  .recue_title,
-  .page_title_climate,
-  .biodiversity-title,
-  .climate-title,
-  .marine_title {
-    font-size: 32px;
-    margin: 20px 0 20px 0;
-  }
-
-  h3 {
-    margin-left: 0;
-    font-size: 18px;
-  }
-
-  #title_quote {
-    font-size: 5vw;
-    max-width: 95vw;
-    margin: 10% auto 0 auto;
-    text-align: center;
-  }
-}
-
-@media (max-width: 900px) {
-
-  /* Section containers */
-  .intro_section,
-  .updates,
-  .biodiversity-section,
-  .climate-section,
-  .Marine_conservation,
-  .about,
-  .donate_section {
-    padding-left: 10px;
-    padding-right: 10px;
-    max-width: 100vw;
-    box-sizing: border-box;
-    align-items: center;
-  }
-
-  .about_cards_container,
-  .custom-cards .update_cards_container,
-  .wildlife_rescue {
-    flex-direction: column;
-    gap: 18px;
-    align-items: center;
-    margin-left: 0;
-  }
-
-  .about_card,
-  .card-gradient,
-  .rescue_card {
-    max-width: 98vw;
-    min-width: 0;
-  }
-
-  .biodiversity-grid,
-  .grid_container_climate {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    max-width: 98vw;
-    margin-left: 0;
-    padding: 0;
-  }
-
-  .biodiversity-card-large,
-  .biodiversity-card-small-top,
-  .biodiversity-card-small-bottom {
-    min-width: 0;
-    width: 100%;
-    min-height: 120px;
-  }
-
-  .climate-featured-row {
-    grid-template-columns: 1fr;
-    flex-direction: column;
-  }
-
-  .climate-featured-info {
-    min-height: unset;
-    padding: 16px 8px;
-  }
-
-  .climate-list-row {
-    flex-direction: column;
-    gap: 12px;
-  }
-
-  .climate-card {
-    max-width: 98vw;
-    min-width: 0;
-    flex-direction: row;
-    padding: 12px 8px 12px 0;
-  }
-
-  .horizontal-container {
-    margin-left: 0;
-    margin-right: 0;
-    padding: 10px 0;
-  }
-
-  .info-box {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 10px;
-    margin-top: 20px;
-  }
-
-  .marine_image_wrapper img,
-  .finWhale_image,
-  .lowtide_image {
-    width: 100%;
-    min-width: 0;
-    max-width: 98vw;
-    height: 100%;
-    min-height: 100px;
-    max-height: 180px;
-    margin-bottom: 10px;
-  }
-}
-
+/* For mobile (max-width: 600px) */
 @media (max-width: 600px) {
+  .section {
+    padding: 8px 2px;
+    width: 100vw;
+  }
 
-  /* Even smaller screens */
-  .footer,
-  .footer-container {
+  .section-content-wrapper {
     flex-direction: column;
-    align-items: center;
-    padding: 20px 5px;
     margin-left: 0;
-    text-align: center;
-    gap: 10px;
+    max-width: 100vw;
+    padding: 6px;
   }
 
-  .footer-left,
-  .footer-links {
-    margin-left: 0;
-    min-width: 0;
+  .section-img img {
+    width: 90px;
+    height: 90px;
+    margin-bottom: 8px;
+  }
+
+  .section-content {
     width: 100%;
-    justify-content: center;
+    min-width: 0;
   }
 
-  .footer-links {
-    gap: 10px;
+  .section-title {
+    font-size: 1.2rem;
   }
 
-  .logo {
-    font-size: 20px;
-  }
-
-  .donate-btn,
-  .donate-btn-top {
-    width: 98vw;
-    max-width: 98vw;
-    font-size: 16px;
-    padding: 12px;
-    margin: 20px auto;
-  }
-
-  .content-donate {
-    padding: 10px;
-    max-width: 98vw;
+  .section-desc {
+    font-size: 1rem;
   }
 }
 
-/* Make images and videos responsive */
+/* Ensure images and videos are always responsive */
 img,
 video {
   max-width: 100%;
   height: auto;
   display: block;
-}
-
-/* Responsive text for all sections */
-body,
-input,
-button,
-select,
-textarea {
-  font-size: 16px;
-}
-
-@media (max-width: 500px) {
-  #intro_vid {
-    min-height: 180px;
-    max-height: 250px;
-    height: 40vw;
-  }
-
-  .index2_leopard {
-    height: 180px;
-  }
-
-  .biodiversity-title,
-  .climate-title,
-  .marine_title {
-    font-size: 22px;
-  }
 }
