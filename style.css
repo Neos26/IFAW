@@ -296,7 +296,7 @@ nav a:hover {
   align-items: center;
   padding-bottom: 50px;
   gap: 20px;
-  background: url(--dark_bg);
+  background: var(--dark-bg);
 }
 
 #intro_vid {
@@ -380,7 +380,7 @@ nav a:hover {
 
 /*blog section */
 .blog-section {
-  background: (--dark-bg);
+  background: var(--dark-bg);
   margin-top: 60px;
   margin-bottom: 60px;
 }
@@ -724,7 +724,7 @@ nav a:hover {
 
 /* Climate */
 .climate-section {
-  background: (--dark-bg);
+  background: var(--dark-bg);
 }
 
 .climate-title {
