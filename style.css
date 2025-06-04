@@ -439,21 +439,20 @@ nav a:hover {
 
 /* Biodiversity Section */
 .biodiversity-section {
-  /* background: #0d3d15;
-  background: linear-gradient(0deg, #2E6F40 1%, rgba(255, 255, 255, 1) 66%); */
   padding: 60px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: white;
+  background: #A7FEA4;
+  background: radial-gradient(circle farthest-corner at center center, #A7FEA4 0%, #181C18 75%);
 }
 
 .biodiversity-title {
   font-size: 100px;
-  font-weight: 700;
+  font-weight: 800;
   text-align: center;
   margin-bottom: 60px;
-  color: #074e00;
+  color: #ffffff;
 }
 
 .card-gradient-biodiversity {
@@ -797,15 +796,16 @@ nav a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: white;
+  background: #A7FEA4;
+  background: radial-gradient(circle farthest-corner at center center, #A7FEA4 0%, #181C18 75%);
 }
 
 .marine-title {
   font-size: 100px;
-  font-weight: 700;
+  font-weight: 800;
   text-align: center;
   margin-bottom: 60px;
-  color: #074e00;
+  color: #ffffff;
 }
 
 .card-gradient-biodiversity {
