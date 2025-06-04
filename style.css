@@ -57,8 +57,15 @@ body {
   white-space: nowrap;
 }
 
+.ifaw{
+  padding: 8px 18px;
+  border-radius: 8px;
+}
+
 .bottom-nav-link.active,
-.bottom-nav-link:hover {
+.bottom-nav-link:hover,
+.ifaw.active,
+.ifaw:hover{
   background: #1a2e1a;
   color: #aaffaa;
 }
