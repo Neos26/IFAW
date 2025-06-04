@@ -1384,7 +1384,6 @@ p.donate_p {
 /* Footer */
 .footer {
   background: #f9f9f9;
-  font-family: sans-serif;
   padding-top: 20px;
   padding-bottom: 20px;
 }
@@ -1394,6 +1393,7 @@ p.donate_p {
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 40px;
+  padding-bottom: 60px;
 }
 
 .footer-left {
@@ -1422,7 +1422,7 @@ p.donate_p {
 }
 
 .footer-left button {
-  background: #007bff;
+  background: #08a100;
   color: #fff;
   border: none;
   cursor: pointer;
