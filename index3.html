@@ -10,6 +10,7 @@
 
 <body class="body_index3">
 
+    <!-- Navigation bar -->
     <nav class="bottom-nav">
         <a href="index.html" class="bottom-nav-link">Home</a>
         <a href="https://neos26.github.io/Portfolio/" class="bottom-nav-link ifaw">Portfolio</a>
@@ -22,8 +23,10 @@
         <a href="index.html#donate_bookmark" class="bottom-nav-link active">Donate</a>
     </nav>
 
+    <!-- Main showcase and donation form -->
     <div class="showcase_index3 fade_in">
         <div class="container_index3 fade_in">
+            <!-- IFAW info card -->
             <div class="card_index3 fade_in">
                 <h2>IF<span style="color: #08a100; text-decoration: underline;">AW</span></h2>
                 <p><strong>Help animals and people thrive together</strong></p>
@@ -35,14 +38,17 @@
                 <p><strong>Donate now &gt;&gt;</strong></p>
             </div>
 
+            <!-- Donation form -->
             <div class="form fade_in">
                 <h3>🔒 Secure Donation</h3>
+                <!-- Donation type tabs -->
                 <div class="tabs">
                     <div class="tab" onclick="selectTab(this)">Give once</div>
                     <div class="tab active" onclick="selectTab(this)">💙 Monthly</div>
                 </div>
                 <div class="note">The most effective way to support the cause</div>
 
+                <!-- Preset donation amounts -->
                 <div class="amounts">
                     <div class="amount-btn" onclick="selectAmount(this, 15)">$15</div>
                     <div class="amount-btn" onclick="selectAmount(this, 60)">$60</div>
@@ -52,32 +58,38 @@
                     <div class="amount-btn selected" onclick="selectAmount(this, 1000)">$1000</div>
                 </div>
 
+                <!-- Custom donation amount input -->
                 <div class="custom-amount">
                     <input type="number" id="customAmount" placeholder="Or enter custom amount" value="1000" />
                 </div>
 
+                <!-- Dedication checkbox -->
                 <div class="dedicate">
                     <input type="checkbox" id="dedicate" />
                     <label for="dedicate">Dedicate this donation</label>
                 </div>
 
+                <!-- Submit donation button -->
                 <button class="donate-btn" onclick="donate()">Complete Donation</button>
             </div>
         </div>
     </div>
 
     <script>
+        // Handles tab selection (Give once / Monthly)
         function selectTab(el) {
             document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
             el.classList.add('active');
         }
 
+        // Handles preset amount selection and updates custom amount input
         function selectAmount(el, amount) {
             document.querySelectorAll('.amount-btn').forEach(btn => btn.classList.remove('selected'));
             el.classList.add('selected');
             document.getElementById('customAmount').value = amount;
         }
 
+        // Handles donation confirmation alert
         function donate() {
             const amount = document.getElementById('customAmount').value;
             const recurring = document.querySelector('.tab.active').textContent.includes('Monthly');
